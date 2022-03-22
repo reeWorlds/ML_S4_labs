@@ -1,0 +1,5 @@
+1. In-house unsupervised classifiers: k-means, mean shift, DBSCAN, OPTICS, Spectral clustering
+1.1 Data visualization (PCA)
+1.2 Comparison of results (benchmark)
+2. Out-of-box classifier: hierarchical clustering.
+3. Visualizing iterations of Kometa K-Means (Slow K-Means)
