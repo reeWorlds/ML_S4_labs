@@ -54,7 +54,7 @@ void Drawer::readFiles()
 		double x, y;
 
 		datF >> x >> y;
-		dat.push_back({ x, -y });
+		dat.push_back({ x, y });
 	}
 	
 	scaleCoords();
@@ -227,7 +227,7 @@ void Drawer::readFiles()
 	}
 }
 
-Drawer::Drawer() : rnd(1)
+Drawer::Drawer() : rnd(3)
 {
 	windowX = 1600;
 	windowY = 800;
