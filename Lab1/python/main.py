@@ -7,6 +7,8 @@ from sklearn.cluster import DBSCAN
 from sklearn.cluster import OPTICS
 from sklearn.cluster import SpectralClustering
 from sklearn.cluster import Birch
+from numpy import where
+from sklearn.datasets import make_classification
 from sklearn import metrics
 from scipy.spatial import distance
 from sklearn.decomposition import PCA
@@ -178,5 +180,22 @@ def int_main():
 	do_BIRCH(data_, data2D, data['species'])
 
 
+def gen_data():
+	x, y = make_classification(n_samples=500, n_features=2, n_classes=4, n_informative=2,
+								n_redundant=0, n_clusters_per_class=1, random_state=1)
+	for class_value in range(4):
+		# get row indexes for samples with this class
+		row_ix = where(y == class_value)
+		# create scatter of these samples
+		pyplot.scatter(x[row_ix, 0], x[row_ix, 1])
+
+	pyplot.show()
+	pyplot.cla()
+
+	df = pd.DataFrame(data=x)
+	df.to_csv('data.csv')
+
+
 if __name__ == '__main__':
-	int_main()
+	#int_main() #do clustering
+	gen_data() #generate dataset for Kometa K-Means
