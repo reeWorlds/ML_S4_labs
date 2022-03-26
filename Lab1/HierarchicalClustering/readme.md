@@ -1,4 +1,4 @@
-#HierarchicalClusteringDrawer
+# HierarchicalClusteringDrawer
 
 Control:
 Type of clustering: 1, 2, 3

@@ -1,4 +1,4 @@
-#Kometa K-Means
+# Kometa K-Means
 
 Control:
 Generate new initial clustering: N
