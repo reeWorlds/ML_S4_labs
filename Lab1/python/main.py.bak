@@ -197,5 +197,5 @@ def gen_data():
 
 
 if __name__ == '__main__':
-	int_main() #do clustering
-	# gen_data() #generate dataset for Kometa K-Means
+	#int_main() #do clustering
+	gen_data() #generate dataset for Kometa K-Means
